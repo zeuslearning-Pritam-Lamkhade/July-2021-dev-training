@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
+    />
+    <link
+      href="//db.onlinewebfonts.com/c/16697a764b01cdcc691b05f001046bc3?family=Museo+Sans+500"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+  </head>
+  <style>
+    @font-face {
+  font-family: Quicksand-Medium;
+  src: url(../quantum-screen-assets/Quicksand-font-1/static/Quicksand-Medium.ttf);
+}
+@font-face {
+  font-family: Quicksand-Bold;
+  src: url(../quantum-screen-assets/Quicksand-font-1/static/Quicksand-Bold.ttf);
+}
+@import url(//db.onlinewebfonts.com/c/16697a764b01cdcc691b05f001046bc3?family=Museo+Sans+500);
+@font-face {
+  font-family: "Museo Sans 500";
+  src: url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.eot");
+  src: url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.svg#Museo Sans 500")
+      format("svg");
+}
+html,
+body {
+  font-family: Quicksand-Medium;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  height: 100%;
+  color: #222222;
+  background-color: #eeeeee;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.navbar {
+  height: 56px;
+  width: 100%;
+  background-color: #25313f;
+  border-bottom: 2px solid #31b9e4;
+}
+.brand-logo {
+  width: 134px;
+  height: 36px;
+  margin: 10px 0 0 24px;
+  float: left;
+}
+
+.login-form {
+  font-family: Quicksand-Medium;
+
+  background-color: white;
+  width: 500px;
+  height: 600px;
+  margin: auto;
+  margin-top: 50px;
+  border-top: 3px solid #31b9e4;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.login-title {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: quicksand-bold;
+}
+.arrow {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  float: left;
+}
+.login-head {
+  margin-left: 128px;
+}
+.buttons {
+  margin-top: 30px;
+  font-size: 16px;
+  font-family: Quicksand-Medium;
+}
+input[type="radio"] {
+  vertical-align: bottom;
+  /* remove standard background appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* create custom radiobutton appearance */
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  /* background-color only for content */
+  background-clip: content-box;
+  border: 2px solid green;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* appearance for checked radiobutton */
+input[type="radio"]:checked {
+  background-color: green;
+}
+
+select:focus,
+option:focus,
+input:focus {
+  outline: none;
+}
+input {
+  border: none;
+}
+
+.state-district,
+.state,
+.district {
+  margin-top: 40px;
+}
+#state,
+#district {
+  background: url(/quantum-screen-assets/icons/arrow-down.svg) 100% no-repeat;
+}
+.username-pwd {
+  margin-top: 20px;
+}
+
+select {
+  border: none;
+  width: 440px;
+  margin-top: 20px;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 5px;
+  -webkit-appearance: none;
+}
+#uname {
+  width: 440px;
+  margin-top: 40px;
+
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 5px;
+}
+.pwd {
+  width: 440px;
+  margin-top: 40px;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 5px;
+  display: flex;
+}
+.arrow-down {
+  vertical-align: baseline;
+  float: center;
+  margin-right: 20px;
+}
+
+.remember-me {
+  margin-top: 40px;
+}
+
+.forgot {
+  float: right;
+  margin-right: 50px;
+  color: green;
+  font-size: small;
+}
+.login {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.login-button {
+  background-color: #3fd28b;
+  width: 200px;
+  height: 40px;
+  text-transform: uppercase;
+  border: 1px solid #3fd28b;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+.preview {
+  margin-left: 250px;
+  float: right;
+}
+
+.footer {
+  flex-shrink: 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.footer-links {
+  text-align: center;
+  margin: 32px 0 16px;
+}
+.footer-links a {
+  color: #1f7a54;
+  text-decoration: none;
+  font-size: 14px;
+}
+.about {
+  padding-right: 8px;
+  border-right: 1px solid #0000001f;
+}
+.contact-us {
+  padding-left: 8px;
+}
+.footer-panel {
+  height: 40px;
+  text-align: center;
+  background-color: #e0e1e1;
+}
+.footer-logo > img {
+  width: 90px;
+  height: 24px;
+  margin: 8px 16px 8px 0;
+  padding-right: 16px;
+  border-right: 1px solid #0000001f;
+  vertical-align: middle;
+}
+.copyright {
+  color: #616161;
+  font-size: 12px;
+}
+.copyright > span {
+  padding-right: 8px;
+}
+
+  </style>
+  <body>
+    
+
+    <div class="content">
+      
+      <!--header  -->
+      <div class="navbar">
+        <div class="brand-logo">
+          <a href="#"
+            ><img
+              src="quantum-screen-assets/icons/logo used in header.svg"
+              alt=""
+          /></a>
+        </div>
+      </div>
+  
+      <!-- middle content -->
+      <form action="/index.html">
+      <div class="login-form">
+          <div class="login-title">
+              <img class="arrow" src="/quantum-screen-assets/icons/sort.svg" alt="">
+              <span class="login-head">Log in with Quantum</span> 
+          </div>
+
+          <div class="buttons">
+              <input  type="radio"  name="ds" value="1" required>District &nbsp;&nbsp;
+              <input type="radio"  name="ds" value="2" required>Independent school
+          </div>
+
+          <div class="state-district">
+              <div class="state">
+                  <label for="state" style="font-size: small;">State*</label>
+                  <div>
+                      <select id="state" style="margin-top: 0;"name="state" >
+                          <option  value="">Alabama</option>
+                      </select>
+                  </div>
+
+              </div>
+              <div class="district">
+                  <label for="district" style="font-size: small;">District*</label>
+                  <br>
+                  <select id="district" style="margin-top:0px;" name="district" >
+                      <option  value="">Alabama school district </option>
+
+                  </select>
+
+
+
+              </div>
+          </div>
+
+        
+        <div class="username-pwd">
+            <div>
+                <input type="email" id="uname" placeholder="Username/Email ID*"
+       pattern="+@+.com" size="30" required>
+                <br>
+            </div>
+            <span class="forgot">FORGOT USERNAME?</span>
+
+             <div class="pwd">
+                <input  type="password" placeholder="Password*" name="psw" required>
+                
+                <img class="preview"src="/quantum-screen-assets/icons/preview.svg" alt="" >
+                
+                
+            </div>
+            <span class="forgot">FORGOT PASSWORD?</span>
+            
+             <div class="remember-me">
+                 <img style="vertical-align: bottom;"src="/quantum-screen-assets/icons/checkbox-checked.svg" alt=""> 
+                <span>Remember me</span>
+            </div>
+
+            <div class="login">
+               <input type="submit" class="login-button"value="Log In">
+            </div>
+        </div>
+       
+    </div>
+    </form>
+
+
+       <!-- footer -->
+        <div class="footer">
+          <div class="footer-links">
+            <span class="about"><a href="#">About</a></span>
+            <span class="contact-us"><a href="">Contact Us</a></span>
+          </div>
+          <div class="footer-panel">
+            <span class="footer-logo"
+              ><img
+                src="quantum-screen-assets/icons/logo used in footer.svg"
+                alt=""
+            /></span>
+            <span class="copyright"
+              ><span>Copyright &copy; 2020-2021</span>
+              <span><strong>Zeus Systems Pvt. Ltd.</strong></span
+              ><span> All rights reserved.</span></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
